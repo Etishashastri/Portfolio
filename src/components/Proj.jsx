@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-//import Parkinson from "../../public/Parkinson.png";
 import game from "../../public/game.png";
 import book from "../../public/book.jpeg";
 import hospital from "../../public/hospital.jpeg";
 import ecommerce from "../../public/ecommerce.jpeg";
 import brain from "../../public/brain.jpeg"
+
 function Proj() {
     const [expandedCard, setExpandedCard] = useState(null);
 
@@ -12,25 +12,25 @@ function Proj() {
         {
             id: 1,
             logo: brain,
-            name: "Parkinson's Disease Detection Project",
+            name: "Parkinson's Detection",
             description: "This project aims to detect Parkinson's disease using machine learning algorithms."
         },
         {
             id: 2,
             logo: game,
-            name: "Super Mario  Mushroom Game",
+            name: "Super Mushroom Game",
             description: "A fun and engaging platformer game inspired by the classic Super Mario game."
         },
         {
             id: 3,
             logo: book,
-            name: "Book-Help (Second Hand Books)",
-            description: "An online platform to buy and sell second-hand books easily."
+            name: "Book-Help ",
+            description: "An online platform to buy and sell second-hand books to underpreviledged kids."
         },
         {
             id: 4,
             logo: hospital,
-            name: "Hospital Management System",
+            name: "Hospital Manag. System",
             description: "A comprehensive system to manage hospital operations and patient information."
         },
         {
@@ -46,8 +46,7 @@ function Proj() {
     };
 
     return (
-        <div name="Pojects"
-        className='max-w-screen-xl container mx-auto px-4 md:px-20 mt-10'>
+        <div name="Projects" className='max-w-screen-xl container mx-auto px-4 md:px-20 mt-10'>
             <div className='font-bold mb-5 flex flex-col items-center'>
                 <h1 className='text-3xl underline'>My Projects</h1>
                 <div className='flex flex-wrap justify-center gap-x-8 gap-y-8 my-5'>
@@ -66,7 +65,7 @@ function Proj() {
                                     className='bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded mt-4'
                                     onClick={() => handleExpandClick(id)}
                                 >
-                                    Description
+                                    {expandedCard === id ? 'Hide Description' : 'Show Description'}
                                 </button>
                                 {expandedCard === id && (
                                     <div className='mt-4 p-4 bg-lime-200 text-black border-t w-full rounded'>
@@ -80,7 +79,6 @@ function Proj() {
             </div>
             <hr />
         </div>
-        
     );
 }
 

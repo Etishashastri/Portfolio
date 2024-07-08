@@ -16,7 +16,7 @@ function Navbar() {
   },*/
   {
     id:3,
-    text:'Pojects'
+    text:'Projects'
   },
   {
     id:4,   
